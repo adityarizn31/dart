@@ -1,23 +1,22 @@
-void main(){
-  var dicoding = Animal('Riya', 4, 3.2);
-
-  dicoding.eat();
-  dicoding.sleep();
-  print(dicoding.weight);
-}
-
 class Animal {
-  String name;
-  int age;
-  double weight;
+  String _name;
+  int _age;
+  double _weight;
 
-  Animal(this.name, this.age, this.weight);
+  Animal(this._name, this._age, this._weight);
+
+  set name(String value) {
+    _name = value;
+  }
+
+  double get weight => _weight;
+  int get age => _age;
 
   void eat() {
-    print('$name is eating');
+    print('$_name is eating');
   }
 
   void sleep() {
-    print('$name is sleeping');
+    print('$_name is sleeping');
   }
 }
